@@ -4,12 +4,11 @@ using UnityEngine;
 
 public class ObstaclesBehaviour : MonoBehaviour
 {
-    void OnTriggerEnter(Collider other)
+    private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Player"))
         {
         Debug.Log("Player has touched the obstacle and died.");
         }
     }
-
 }
