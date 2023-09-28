@@ -81,7 +81,7 @@ TextureImporter:
       213: 5071468621068277372
     second: platform center broken
   externalObjects: {}
-  serializedVersion: 11
+  serializedVersion: 12
   mipmaps:
     mipMapMode: 0
     enableMipMap: 1
@@ -98,11 +98,12 @@ TextureImporter:
     externalNormalMap: 0
     heightScale: 0.25
     normalMapFilter: 0
+    flipGreenChannel: 0
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
-  ignoreMasterTextureLimit: 0
+  ignoreMipmapLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -141,6 +142,8 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 1
+  swizzle: 50462976
+  cookieLightType: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -152,6 +155,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -164,6 +168,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -176,6 +181,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 1
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -188,6 +194,33 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 1
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
@@ -755,34 +788,33 @@ TextureImporter:
       name: _MaskTex
     nameFileIdTable:
       alcove: -2233024862284425117
+      altar: 5029292005189578874
+      bottom center: 238184909717087175
       bottom left: 1207995129373305873
-      platform center 2: 8528629237872346326
       bottom right: 1072575427547771995
-      platform center broken: 5071468621068277372
+      center: 2711483660633649692
       column: -3471099132577591465
-      top right: -2986289010829417145
+      corner bottom left: -3087923049267421831
       corner bottom right: 1896917209043247837
+      left: 3051700556192001131
+      platform center 1: -8053316151360693025
+      platform center 2: 8528629237872346326
+      platform center 3: 3096818659382201874
+      platform center broken: 5071468621068277372
       platform left: -6045407651208701235
       platform right: 4359962784501794687
-      platform center 3: 3096818659382201874
-      top 2: 2014507693514639059
-      center: 2711483660633649692
-      top 1: -5324456081849142320
-      top left: -3551666724350824055
-      altar: 5029292005189578874
-      platform center 1: -8053316151360693025
       right: -6144804553002260892
       stairs bottom left: 4886965728027901114
-      corner bottom left: -3087923049267421831
       stairs bottom right: 4797984684411464661
-      stairs top right: 313617752247006098
       stairs top left: -5066930556089273088
-      left: 3051700556192001131
+      stairs top right: 313617752247006098
+      top 1: -5324456081849142320
+      top 2: 2014507693514639059
       top 3: 590804991617954378
-      bottom center: 238184909717087175
-  spritePackingTag: 
+      top left: -3551666724350824055
+      top right: -2986289010829417145
+  mipmapLimitGroupName: 
   pSDRemoveMatte: 0
-  pSDShowRemoveMatteOption: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 
