@@ -12,21 +12,9 @@ public class LightScript : MonoBehaviour
 
     void update()
     {
-        if (activo == true)
-        {
-            if (Input.GetKey(KeyCode.S))
-            {
-                Light.transform.SetParent(PlayerHand);
-                Light.transform.position = PlayerHand.position;
-                Light.GetComponent<Rigidbody2D>().isKinematic = true;
-            }
-        }
+        
 
-        if (Input.GetKey(KeyCode.Space))
-        {
-            Light.transform.SetParent(null);
-            Light.GetComponent<Rigidbody2D>().isKinematic = false;
-        }
+       
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -36,6 +24,15 @@ public class LightScript : MonoBehaviour
             activo = true;
             Debug.Log("Collition Completed");
 
+        }
+        if (activo == true)
+        {
+            if (Input.GetKey(KeyCode.S))
+            {
+                Light.transform.SetParent(PlayerHand);
+                Light.transform.position = PlayerHand.position;
+                Light.GetComponent<Rigidbody2D>().isKinematic = true;
+            }
         }
 
     }
