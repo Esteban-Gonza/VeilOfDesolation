@@ -3,8 +3,7 @@ using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody2D))]
 [RequireComponent(typeof(AudioSource))]
-public class PlayerMovement : MonoBehaviour
-{
+public class PlayerMovement : MonoBehaviour{
 
     [Header("Character")]
     [SerializeField] private Animator animator;
@@ -12,7 +11,6 @@ public class PlayerMovement : MonoBehaviour
     [Header("Movement")]
     [SerializeField] private float speed = 0.0f;
     [SerializeField] private float jumpForce = 0.0f;
-    [SerializeField] private float gravity = 0.0f;
     public bool ascend = false; // variable provisional para ejecutar la animación de ascend, que no sé para qué se va a usar
 
     [Header("Audio")]
@@ -22,6 +20,7 @@ public class PlayerMovement : MonoBehaviour
 
     private Rigidbody2D body;
     private AudioSource _audio;
+    private EnemyMovement enemy;
 
     private bool isGrounded;
     private int xScale;
@@ -31,12 +30,11 @@ public class PlayerMovement : MonoBehaviour
     {
         body = GetComponent<Rigidbody2D>();
         _audio = GetComponent<AudioSource>();
+        enemy = FindObjectOfType<EnemyMovement>();
         _audio.clip = walkClip;
 
         isGrounded = true;
         xScale = 1;
-
-        Physics.gravity *= gravity;
     }
 
     private void Update()
@@ -105,6 +103,13 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
+    public void Death(){
+        GameManager.instance.state = GameState.gameOver;
+        enemy.rotationSpeed = 0;
+        enemy.moveSpeed = 0;
+        this.enabled = false;
+    }
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Ground"))
@@ -115,6 +120,10 @@ public class PlayerMovement : MonoBehaviour
             }
             isGrounded = true;
             animator.SetBool("Grounded", isGrounded);
+        }
+
+        if (collision.gameObject.CompareTag("Enemy")){
+            Death();
         }
     }
 

@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class EnemyMovement : MonoBehaviour{
 
-    [SerializeField] float rotationSpeed;
-    [SerializeField] float moveSpeed;
+    public float rotationSpeed;
+    public float moveSpeed;
 
     private Vector2 direction;
     [SerializeField] private GameObject targetPlayer;

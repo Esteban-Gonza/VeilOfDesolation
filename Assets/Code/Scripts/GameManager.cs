@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public enum GameState{
     inGame, winGame, gameOver
@@ -46,5 +47,18 @@ public class GameManager : MonoBehaviour{
             default:
                 break;
         }
+    }
+
+    // Scene controller
+    public void GoToScene(string sceneName){
+        SceneManager.LoadScene(sceneName);
+    }
+
+    public void ResetScene(){
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+
+    public void GoToNextScene(){
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 }
