@@ -35,6 +35,7 @@ public class LightScript : MonoBehaviour
                 Light.GetComponent<Rigidbody2D>().isKinematic = true;
             }
         }
+        
 
     }
 

@@ -7,16 +7,17 @@ public class WeaponRb : MonoBehaviour
     private Rigidbody2D WeaponRbody; 
     public float Speed;
 
-    // Start is called before the first frame update
+ 
     void Start()
     {
         WeaponRbody = GetComponent<Rigidbody2D>();
         
     }
 
-    // Update is called once per frame
+    //Velocity and destroy the weapon
     void Update()
     {
-        WeaponRbody.velocity = new Vector2(+Speed,0);
+        WeaponRbody.velocity = new Vector2(+Speed * Time.deltaTime, 0);
+        Destroy( gameObject, 3f);
     }
 }
