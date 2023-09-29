@@ -1,0 +1,149 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Vegetation
+  m_EditorData:
+    serializedVersion: 2
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 1
+      compressionQuality: 50
+      maxTextureSize: 2048
+      textureCompression: 0
+      filterMode: 1
+      generateMipMaps: 1
+      readable: 0
+      crunchedCompression: 0
+      sRGB: 1
+    platformSettings:
+    - serializedVersion: 3
+      m_BuildTarget: iPhone
+      m_MaxTextureSize: 1024
+      m_ResizeAlgorithm: 0
+      m_TextureFormat: 51
+      m_TextureCompression: 1
+      m_CompressionQuality: 50
+      m_CrunchedCompression: 0
+      m_AllowsAlphaSplitting: 0
+      m_Overridden: 1
+      m_IgnorePlatformSupport: 0
+      m_AndroidETC2FallbackOverride: 0
+      m_ForceMaximumCompressionQuality_BC6H_BC7: 0
+    - serializedVersion: 3
+      m_BuildTarget: Android
+      m_MaxTextureSize: 1024
+      m_ResizeAlgorithm: 0
+      m_TextureFormat: 51
+      m_TextureCompression: 1
+      m_CompressionQuality: 50
+      m_CrunchedCompression: 0
+      m_AllowsAlphaSplitting: 0
+      m_Overridden: 1
+      m_IgnorePlatformSupport: 0
+      m_AndroidETC2FallbackOverride: 0
+      m_ForceMaximumCompressionQuality_BC6H_BC7: 0
+    packingSettings:
+      serializedVersion: 2
+      padding: 4
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 1
+      enableTightPacking: 1
+      enableAlphaDilation: 0
+    secondaryTextureSettings: {}
+    variantMultiplier: 1
+    packables:
+    - {fileID: 102900000, guid: 4da65d68af6d44ef1a9b029df6e8f73c, type: 3}
+    bindAsDefault: 1
+    isAtlasV2: 0
+    cachedData: {fileID: 0}
+    packedSpriteRenderDataKeys:
+    - 99b1b410d0ab308419fb6b98f4cca4df: 21300000
+    - 550e9510c9b671b429729dc7e2b101aa: 21300000
+    - b0eced10e3ac08845a178ca8be352a3b: 21300000
+    - a20fdbb07ecb2af4f8142df3495ba231: 21300000
+    - f3f694e0c9c804241a6a0322335c4d3f: 21300000
+    - 1336d6d11fa31d04084083874458351d: 21300000
+    - 66ac52544ce181144a3dda19b48c0aac: 21300000
+    - 4c04d0b4b89e2214c9691b49b8648211: 21300000
+    - 1af0716580d794d49865e5f4b7a7268d: 21300000
+    - be5269d5d90d56940bf1226192b2de82: 21300000
+    - f3e72416190d095498e247a2ea9ee09b: 21300000
+    - 45b30f76aa5d5ca479d80f3dc61c97a4: 21300000
+    - eede083846769f0468408a359f2349ff: 21300000
+    - c77b7a487e4c1dc4783e452c3f4c67fa: 21300000
+    - da4ccba8f38260646a69433f5754bdc8: 21300000
+    - 19f338290af4c42418636c9789d9cba7: 21300000
+    - 6a8a1b3917cbb5d4197c19cf74474c98: 21300000
+    - 81b024b941e0af84faa0dfec80b2e976: 21300000
+    - 75861eea439a6884f9cb8a9aa18a51da: 21300000
+    - f9b59e3b30fccdc40ba2648b48a0051d: 21300000
+    - 8c389e6b7ae84894a8a4d0f192cc2801: 21300000
+    - 1ecf91bb234c830408b987e4174b3a7e: 21300000
+    - a1ccf36e37b2aba4298e6adbdfe0f58d: 21300000
+    - 9d594cbeaae71c14ba4d4496f686194c: 21300000
+    - 8c20527ff61ff1c46907d174e227a406: 21300000
+    - 13a4baeff0d9046459d476b293944990: 21300000
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites:
+  - {fileID: 21300000, guid: 99b1b410d0ab308419fb6b98f4cca4df, type: 3}
+  - {fileID: 21300000, guid: 550e9510c9b671b429729dc7e2b101aa, type: 3}
+  - {fileID: 21300000, guid: b0eced10e3ac08845a178ca8be352a3b, type: 3}
+  - {fileID: 21300000, guid: a20fdbb07ecb2af4f8142df3495ba231, type: 3}
+  - {fileID: 21300000, guid: f3f694e0c9c804241a6a0322335c4d3f, type: 3}
+  - {fileID: 21300000, guid: 1336d6d11fa31d04084083874458351d, type: 3}
+  - {fileID: 21300000, guid: 66ac52544ce181144a3dda19b48c0aac, type: 3}
+  - {fileID: 21300000, guid: 4c04d0b4b89e2214c9691b49b8648211, type: 3}
+  - {fileID: 21300000, guid: 1af0716580d794d49865e5f4b7a7268d, type: 3}
+  - {fileID: 21300000, guid: be5269d5d90d56940bf1226192b2de82, type: 3}
+  - {fileID: 21300000, guid: f3e72416190d095498e247a2ea9ee09b, type: 3}
+  - {fileID: 21300000, guid: 45b30f76aa5d5ca479d80f3dc61c97a4, type: 3}
+  - {fileID: 21300000, guid: eede083846769f0468408a359f2349ff, type: 3}
+  - {fileID: 21300000, guid: c77b7a487e4c1dc4783e452c3f4c67fa, type: 3}
+  - {fileID: 21300000, guid: da4ccba8f38260646a69433f5754bdc8, type: 3}
+  - {fileID: 21300000, guid: 19f338290af4c42418636c9789d9cba7, type: 3}
+  - {fileID: 21300000, guid: 6a8a1b3917cbb5d4197c19cf74474c98, type: 3}
+  - {fileID: 21300000, guid: 81b024b941e0af84faa0dfec80b2e976, type: 3}
+  - {fileID: 21300000, guid: 75861eea439a6884f9cb8a9aa18a51da, type: 3}
+  - {fileID: 21300000, guid: f9b59e3b30fccdc40ba2648b48a0051d, type: 3}
+  - {fileID: 21300000, guid: 8c389e6b7ae84894a8a4d0f192cc2801, type: 3}
+  - {fileID: 21300000, guid: 1ecf91bb234c830408b987e4174b3a7e, type: 3}
+  - {fileID: 21300000, guid: a1ccf36e37b2aba4298e6adbdfe0f58d, type: 3}
+  - {fileID: 21300000, guid: 9d594cbeaae71c14ba4d4496f686194c, type: 3}
+  - {fileID: 21300000, guid: 8c20527ff61ff1c46907d174e227a406, type: 3}
+  - {fileID: 21300000, guid: 13a4baeff0d9046459d476b293944990, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - Sprite_Tree_1
+  - Plants_111
+  - Plants_151
+  - Sprite_Tree_2
+  - Sprite_Trees_1
+  - Plants_14
+  - Plants_93
+  - Plants_73
+  - Plants_23
+  - Plants_113
+  - Plants_4
+  - Plants_31
+  - Plants_6
+  - Plants_53
+  - Sprite_Trees_2
+  - Plants_171
+  - Plants_11
+  - Sprite_Tree_3
+  - Plants_13
+  - Plants_133
+  - Plants_153
+  - Plants_51
+  - Plants_91
+  - Plants_3
+  - Plants_2
+  - Plants_71
+  m_RenderDataMap: {}
+  m_Tag: Vegetation
+  m_IsVariant: 0
