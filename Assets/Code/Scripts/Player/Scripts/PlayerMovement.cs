@@ -12,7 +12,6 @@ public class PlayerMovement : MonoBehaviour
     [Header("Movement")]
     [SerializeField] private float speed = 0.0f;
     [SerializeField] private float jumpForce = 0.0f;
-    [SerializeField] private float gravity = 0.0f;
     public bool ascend = false; // variable provisional para ejecutar la animación de ascend, que no sé para qué se va a usar
 
     [Header("Audio")]
@@ -35,12 +34,9 @@ public class PlayerMovement : MonoBehaviour
 
         isGrounded = true;
         xScale = 1;
-
-        Physics.gravity *= gravity;
     }
 
-    private void Update()
-    {
+    private void Update(){
         Move();
     }
 
