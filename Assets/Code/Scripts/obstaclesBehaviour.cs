@@ -8,7 +8,7 @@ public class ObstaclesBehaviour : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-        Debug.Log("Player has touched the obstacle and died.");
+            GameManager.instance.state = GameState.gameOver;
         }
     }
 }
