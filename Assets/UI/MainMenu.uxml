@@ -1,0 +1,18 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI/Styles.uss?fileID=7433441132597879392&amp;guid=7cca3c078dda7034fac5d4265e52c197&amp;type=3#Styles" />
+    <ui:VisualElement name="contenedor" class="contenedor" style="flex-grow: 1; background-color: rgba(32, 32, 32, 0); background-image: url(&apos;project://database/Assets/Environment/Sprites/Clouds/Sprite_Cloud_2.png?fileID=2800000&amp;guid=9fb925f0dc7934c45865efb05a386098&amp;type=3#Sprite_Cloud_2&apos;);">
+        <ui:VisualElement name="izquierda" class="izquierda" style="flex-grow: 1; -unity-background-scale-mode: stretch-to-fill; -unity-background-image-tint-color: rgb(255, 255, 255); max-width: 500px; min-width: 300px; background-color: rgba(46, 46, 46, 0.58);">
+            <ui:VisualElement name="logo" class="logo" style="flex-grow: 1;" />
+            <ui:VisualElement name="buttons" class="buttons" style="flex-grow: 1; margin-top: 90px;">
+                <ui:Button text="PLAY" parse-escape-sequences="true" display-tooltip-when-elided="true" name="play" class="buttonNormal" />
+                <ui:Button text="CONTROLS" parse-escape-sequences="true" display-tooltip-when-elided="true" name="controls" class="buttonNormal" />
+                <ui:Button text="OPTIONS" parse-escape-sequences="true" display-tooltip-when-elided="true" name="options" class="buttonNormal" />
+                <ui:Button text="CREDITS" parse-escape-sequences="true" display-tooltip-when-elided="true" name="credits" class="buttonNormal" />
+            </ui:VisualElement>
+            <ui:VisualElement name="footer" class="footer" style="flex-grow: 1;">
+                <ui:Label tabindex="-1" text="Dark Tombs Studios 2023" parse-escape-sequences="true" display-tooltip-when-elided="true" name="label" />
+            </ui:VisualElement>
+        </ui:VisualElement>
+        <ui:VisualElement name="derecha" class="derecha" style="flex-grow: 1; background-image: url(&apos;project://database/Assets/Art/UI/controles.png?fileID=2800000&amp;guid=213cc9d791f83bd47b19b07f3c535549&amp;type=3#controles&apos;);" />
+    </ui:VisualElement>
+</ui:UXML>
