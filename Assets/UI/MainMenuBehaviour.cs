@@ -2,6 +2,7 @@ using System.Collections;
 using UnityEditor.SearchService;
 using UnityEngine;
 using UnityEngine.UIElements;
+using UnityEngine.SceneManagement;
 
 public class MainMenuBehaviour : MonoBehaviour
 {
@@ -34,7 +35,7 @@ public class MainMenuBehaviour : MonoBehaviour
     public void playOpen(ClickEvent evnt)
     {
         Debug.Log("play button clicked");
-        
+        SceneManager.LoadScene("OnlyLevel4444", LoadSceneMode.Single);
     }
 
 
