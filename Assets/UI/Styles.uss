@@ -15,6 +15,7 @@ VisualElement {
     -unity-background-image-tint-color: rgb(196, 196, 196);
     background-color: rgb(46, 46, 46);
     justify-content: space-between;
+    width: 400px;
 }
 
 .footer {
@@ -44,7 +45,7 @@ VisualElement {
     align-items: flex-end;
     justify-content: center;
     align-self: center;
-    width: 400px;
+    width: 300px;
     margin-top: 0;
     margin-right: 0;
     margin-bottom: 8px;
@@ -54,10 +55,17 @@ VisualElement {
     font-size: 25px;
     transition-duration: 0.5s;
     transition-timing-function: ease-out;
+    color: rgb(255, 255, 255);
+    -unity-text-outline-color: rgba(0, 0, 0, 0);
+    background-color: rgba(185, 185, 185, 0.12);
+    border-left-color: rgba(76, 76, 76, 0);
+    border-right-color: rgba(76, 76, 76, 0);
+    border-top-color: rgba(76, 76, 76, 0);
+    border-bottom-color: rgba(76, 76, 76, 0);
 }
 
 .buttonNormal:hover {
-    background-color: rgba(0, 0, 0, 0.53);
+    background-color: rgba(84, 101, 81, 0.66);
 }
 
 .controls {
@@ -77,22 +85,60 @@ VisualElement {
     height: 40px;
     font-size: 25px;
     -unity-text-align: middle-center;
-    background-color: rgba(46, 46, 46, 0);
-    transition-duration: 0.2s;
-    transition-timing-function: ease-out;
+    background-color: rgba(46, 46, 46, 0.75);
+    transition-duration: 0.5s;
+    transition-timing-function: ease-in;
     max-width: 150px;
+    border-left-color: rgba(60, 60, 60, 0.71);
+    border-right-color: rgba(60, 60, 60, 0.71);
+    border-top-color: rgba(60, 60, 60, 0.71);
+    border-bottom-color: rgba(60, 60, 60, 0.71);
+    justify-content: center;
+    align-self: auto;
+    padding-top: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    margin-top: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    color: rgb(255, 255, 255);
 }
 
 .buttonback:hover {
-    background-color: rgb(142, 128, 128);
+    background-color: rgb(178, 172, 172);
     color: rgb(38, 36, 36);
+    transition-duration: 0s;
+    transition-timing-function: ease;
 }
 
 .derecha-active {
     translate: 0 0;
+    transition-timing-function: ease-in;
+    transition-duration: 0.2s;
 }
 
 .derecha {
     translate: 100% 0;
     transition-duration: 0.8s;
+    transition-timing-function: ease-in;
+}
+
+.derecha-options {
+}
+
+.derecha2 {
+    translate: 100% 0;
+}
+
+.derecha2-active {
+    translate: -100% 0;
+    transition-timing-function: ease-in;
+    transition-duration: 0.2s;
+}
+
+.derecha3-active {
+    translate: -200% 0;
+    transition-timing-function: ease-in;
 }
