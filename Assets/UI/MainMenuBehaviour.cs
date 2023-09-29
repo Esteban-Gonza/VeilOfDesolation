@@ -8,10 +8,13 @@ using System.Threading;
 public class MainMenuBehaviour : MonoBehaviour
 {
     UIDocument mainMenu;
+    //main buttons
     Button playButton;
     Button controlButton;
     Button optionsButton;
     Button creditsButton;
+    //volume
+    Slider volumeSlider;
     //controls
     Button backButton1;
     VisualElement controlsContainer;
@@ -27,8 +30,11 @@ public class MainMenuBehaviour : MonoBehaviour
         //root document
         mainMenu = GetComponent<UIDocument>();
 
-        // button asination 
+        //play button
         playButton = mainMenu.rootVisualElement.Q("play") as Button;
+
+        // volume slider
+        volumeSlider = mainMenu.rootVisualElement.Q("volumenSlider") as Slider;
 
         //controls
         controlButton = mainMenu.rootVisualElement.Q("controls") as Button;
@@ -46,8 +52,8 @@ public class MainMenuBehaviour : MonoBehaviour
         backButton3 = mainMenu.rootVisualElement.Q("backbutton3") as Button;
 
 
-        if (optionsContainer != null) { Debug.Log("si encontro opt"); }
-        if (creditsContainer != null) { Debug.Log("si encontro cred"); }
+        if (volumeSlider != null) { Debug.Log("si encontro volume"); }
+    
 
         //callbacks
         playButton.RegisterCallback<ClickEvent>(playOpen);
