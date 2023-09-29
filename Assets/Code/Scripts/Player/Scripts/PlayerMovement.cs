@@ -53,7 +53,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void Jump()
     {
-        bool jumpInput = Input.GetButtonDown("Jump");
+        bool jumpInput = Input.GetKeyDown(KeyCode.W);
 
         if (jumpInput && isGrounded)
         {
