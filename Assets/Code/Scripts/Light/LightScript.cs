@@ -28,6 +28,7 @@ public class LightScript : MonoBehaviour
         if (activo == true)
         {
             if (Input.GetKey(KeyCode.S))
+            
             {
                 Light.transform.SetParent(PlayerHand);
                 Light.transform.position = PlayerHand.position;
