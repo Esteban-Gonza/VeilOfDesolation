@@ -9,23 +9,17 @@ public class LightScript : MonoBehaviour
     public Transform PlayerHand;
 
     private bool activo;
-
-    void update()
+    private AudioSource audioSource;
+    private void Start()
     {
-        
-
-       
+        audioSource = GetComponent<AudioSource>();
     }
+
+    
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.tag == "Player")
-        {
-            activo = true;
-            Debug.Log("Collition Completed");
-
-        }
-        if (activo == true)
+         if (activo == true)
         {
             if (Input.GetKey(KeyCode.S))
             
@@ -35,6 +29,19 @@ public class LightScript : MonoBehaviour
                 Light.GetComponent<Rigidbody2D>().isKinematic = true;
             }
         }
+
+
+        if (other.tag == "Player")
+        {
+            activo = true;
+            Debug.Log("Collition Completed");
+            gameObject.transform.GetChild(0).gameObject.SetActive(true);
+            Destroy(gameObject, 9f);
+            audioSource.Play();
+            
+
+        }
+     
         
 
     }
