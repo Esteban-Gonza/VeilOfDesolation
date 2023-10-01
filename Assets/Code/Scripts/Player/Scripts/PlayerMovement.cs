@@ -50,8 +50,6 @@ public class PlayerMovement : MonoBehaviour{
     private void Walk()
     {   
         float horizontalInput = Input.GetAxis("Horizontal");
-
-        transform.Translate(Vector3.right * horizontalInput * speed * Time.deltaTime);
         if (horizontalInput > 0)
         {
             xScale = 1;
@@ -62,27 +60,32 @@ public class PlayerMovement : MonoBehaviour{
         }
 
         transform.localScale = new Vector3(xScale, 1, 1);
-       
-        if (Input.GetKeyDown(KeyCode.W) && isGrounded){
+        transform.Translate(Vector3.right * horizontalInput * speed * Time.deltaTime);
 
-            body.AddForce(new Vector2(0f, 1f).normalized * jumpForce, ForceMode2D.Impulse);
-            isGrounded = false;
-            animator.SetBool("Grounded", isGrounded);
-            animator.SetTrigger("Jump");
-            _audio.PlayOneShot(jumpClip, 0.5f);
-            if (Mathf.Abs(horizontalInput) > 0) 
+        if (isGrounded)
+        {
+            if (Input.GetKeyDown(KeyCode.W))
             {
-                body.AddForce(new Vector2(0f, 1f).normalized * jumpForce, ForceMode2D.Impulse);
+                body.AddForce(new Vector2(0f, 1f) * jumpForce, ForceMode2D.Impulse);
+                isGrounded = false;
+                animator.SetBool("Grounded", isGrounded);
+                animator.SetTrigger("Jump");
+                _audio.PlayOneShot(jumpClip, 0.5f);
+            } else if (Input.GetKeyDown(KeyCode.W) && Mathf.Abs(horizontalInput) > 0)
+            {
+                body.AddForce(Vector2.up * jumpForce, ForceMode2D.Force);
+                body.AddForce(new Vector2(0f, 1f) * jumpForce, ForceMode2D.Impulse);
                 isGrounded = false;
                 animator.SetBool("Grounded", isGrounded);
                 animator.SetTrigger("Jump");
                 _audio.PlayOneShot(jumpClip, 0.5f);
             }
         }
+
         if (Mathf.Abs(horizontalInput) > 0)
         {
             animator.SetFloat("Speed", 1);
-            if (!isAudioPlaying)
+            if (!isAudioPlaying && isGrounded)
             {
                 StartCoroutine(PlayClip(walkClip, 0.1f));
             }
