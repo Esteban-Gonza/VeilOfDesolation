@@ -62,25 +62,16 @@ public class PlayerMovement : MonoBehaviour{
         transform.localScale = new Vector3(xScale, 1, 1);
         transform.Translate(Vector3.right * horizontalInput * speed * Time.deltaTime);
 
-        if (isGrounded)
+ 
+        if (Input.GetKeyDown(KeyCode.W))
         {
-            if (Input.GetKeyDown(KeyCode.W))
-            {
-                body.AddForce(new Vector2(0f, 1f) * jumpForce, ForceMode2D.Impulse);
-                isGrounded = false;
-                animator.SetBool("Grounded", isGrounded);
-                animator.SetTrigger("Jump");
-                _audio.PlayOneShot(jumpClip, 0.5f);
-            } else if (Input.GetKeyDown(KeyCode.W) && Mathf.Abs(horizontalInput) > 0)
-            {
-                body.AddForce(Vector2.up * jumpForce, ForceMode2D.Force);
-                body.AddForce(new Vector2(0f, 1f) * jumpForce, ForceMode2D.Impulse);
-                isGrounded = false;
-                animator.SetBool("Grounded", isGrounded);
-                animator.SetTrigger("Jump");
-                _audio.PlayOneShot(jumpClip, 0.5f);
-            }
+            body.velocity = new Vector2(body.velocity.x, jumpForce);
+            isGrounded = false;
+            animator.SetBool("Grounded", isGrounded);
+            animator.SetTrigger("Jump");
+            _audio.PlayOneShot(jumpClip, 0.5f);
         }
+       
 
         if (Mathf.Abs(horizontalInput) > 0)
         {
