@@ -43,44 +43,55 @@ public class PlayerMovement : MonoBehaviour{
 
     private void Move(){
         Walk();
-        Jump();
         Ascend();
     }
 
-    private void Jump(){
 
-        if (Input.GetKeyDown(KeyCode.W) && isGrounded){
-            
-            body.AddForce(new Vector2(0f, jumpForce), ForceMode2D.Impulse);
-            isGrounded = false;
-            animator.SetBool("Grounded", isGrounded);
-            animator.SetTrigger("Jump");
-            _audio.PlayOneShot(jumpClip, 0.5f);
-        }
-    }
-
-    private void Walk(){
+    private void Walk()
+    {   
         float horizontalInput = Input.GetAxis("Horizontal");
 
-        if (Mathf.Abs(horizontalInput) > 0){
-            animator.SetFloat("Speed", 1);
-
-            if (!isAudioPlaying){
-                StartCoroutine(PlayClip(walkClip, 0.1f));
-            }
-        }else{
-            animator.SetFloat("Speed", 0);
-        }
-
         transform.Translate(Vector3.right * horizontalInput * speed * Time.deltaTime);
-
-        if (horizontalInput > 0){
+        if (horizontalInput > 0)
+        {
             xScale = 1;
-        }else if (horizontalInput < 0){
+        }
+        else if (horizontalInput < 0)
+        {
             xScale = -1;
         }
 
         transform.localScale = new Vector3(xScale, 1, 1);
+       
+        if (Input.GetKeyDown(KeyCode.W) && isGrounded){
+
+            body.AddForce(new Vector2(0f, 1f).normalized * jumpForce, ForceMode2D.Impulse);
+            isGrounded = false;
+            animator.SetBool("Grounded", isGrounded);
+            animator.SetTrigger("Jump");
+            _audio.PlayOneShot(jumpClip, 0.5f);
+            if (Mathf.Abs(horizontalInput) > 0) 
+            {
+                body.AddForce(new Vector2(0f, 1f).normalized * jumpForce, ForceMode2D.Impulse);
+                isGrounded = false;
+                animator.SetBool("Grounded", isGrounded);
+                animator.SetTrigger("Jump");
+                _audio.PlayOneShot(jumpClip, 0.5f);
+            }
+        }
+        if (Mathf.Abs(horizontalInput) > 0)
+        {
+            animator.SetFloat("Speed", 1);
+            if (!isAudioPlaying)
+            {
+                StartCoroutine(PlayClip(walkClip, 0.1f));
+            }
+        }
+        else
+        {
+            animator.SetFloat("Speed", 0);
+        }
+    
     }
 
     private void Ascend(){
@@ -97,7 +108,8 @@ public class PlayerMovement : MonoBehaviour{
     }
 
     private void OnCollisionEnter2D(Collision2D collision){
-        if (collision.gameObject.CompareTag("Ground")){
+        if (collision.gameObject.CompareTag("Ground"))
+            {
             if (!isGrounded){
                 _audio.PlayOneShot(fallClip, 0.5f);
             }
