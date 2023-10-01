@@ -22,7 +22,7 @@ public class PlayerMovement : MonoBehaviour{
     private AudioSource _audio;
     private EnemyMovement enemy;
 
-    private bool isGrounded;
+    [SerializeField] private bool isGrounded;
     private int xScale;
     private bool isAudioPlaying;
 
@@ -48,14 +48,14 @@ public class PlayerMovement : MonoBehaviour{
     }
 
     private void Jump(){
-        bool jumpInput = Input.GetKeyDown(KeyCode.W);
 
-        if (jumpInput && isGrounded){
-            animator.SetTrigger("Jump");
+        if (Input.GetKeyDown(KeyCode.W) && isGrounded){
+            
             body.AddForce(new Vector2(0f, jumpForce), ForceMode2D.Impulse);
-            _audio.PlayOneShot(jumpClip, 0.5f);
             isGrounded = false;
             animator.SetBool("Grounded", isGrounded);
+            animator.SetTrigger("Jump");
+            _audio.PlayOneShot(jumpClip, 0.5f);
         }
     }
 
