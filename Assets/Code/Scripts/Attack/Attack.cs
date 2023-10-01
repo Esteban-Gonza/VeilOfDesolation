@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AttackEnemy : MonoBehaviour
+public class Attack : MonoBehaviour
 {
     public Transform Weapon;
     public GameObject WeaponRb;
