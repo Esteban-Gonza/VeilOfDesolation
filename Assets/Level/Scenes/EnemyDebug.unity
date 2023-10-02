@@ -408,16 +408,6 @@ PrefabInstance:
       propertyPath: targetPlayer
       value: 
       objectReference: {fileID: 1042559045}
-    - target: {fileID: 8756285089592551376, guid: f2ab4459697709e43a7bab91b6fc1714,
-        type: 3}
-      propertyPath: VelocityModule.enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8756285089592551376, guid: f2ab4459697709e43a7bab91b6fc1714,
-        type: 3}
-      propertyPath: VelocityModule.x.scalar
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 9075752707566413633, guid: f2ab4459697709e43a7bab91b6fc1714,
         type: 3}
       propertyPath: m_Name
