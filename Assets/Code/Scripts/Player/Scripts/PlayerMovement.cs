@@ -25,6 +25,7 @@ public class PlayerMovement : MonoBehaviour{
     [SerializeField] private bool isGrounded;
     private int xScale;
     private bool isAudioPlaying;
+    private int JumpCount;
 
     private void Start(){
 
@@ -62,16 +63,18 @@ public class PlayerMovement : MonoBehaviour{
         transform.localScale = new Vector3(xScale, 1, 1);
         body.velocity = new Vector2(horizontalInput * speed, body.velocity.y);
 
-
-        if (Input.GetKeyDown(KeyCode.W))
+        if (JumpCount<2)
         {
-            body.AddForce(new Vector2(0f, 1f) * jumpForce, ForceMode2D.Impulse);
-            isGrounded = false;
-            animator.SetBool("Grounded", isGrounded);
-            animator.SetTrigger("Jump");
-            _audio.PlayOneShot(jumpClip, 0.5f);
-        }
-       
+            if (Input.GetKeyDown(KeyCode.W))
+            {
+                JumpCount++;
+                body.AddForce(new Vector2(0f, 1f) * jumpForce, ForceMode2D.Impulse);
+                isGrounded = false;
+                animator.SetBool("Grounded", isGrounded);
+                animator.SetTrigger("Jump");
+                _audio.PlayOneShot(jumpClip, 0.5f);
+            }
+         }
 
         if (Mathf.Abs(horizontalInput) > 0)
         {
@@ -108,6 +111,7 @@ public class PlayerMovement : MonoBehaviour{
                 _audio.PlayOneShot(fallClip, 0.5f);
             }
             isGrounded = true;
+            JumpCount=0;
             animator.SetBool("Grounded", isGrounded);
         }
 
