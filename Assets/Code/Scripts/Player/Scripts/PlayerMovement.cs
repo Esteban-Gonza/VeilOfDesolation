@@ -65,7 +65,7 @@ public class PlayerMovement : MonoBehaviour{
  
         if (Input.GetKeyDown(KeyCode.W))
         {
-            body.velocity = new Vector2(body.velocity.x, jumpForce);
+            body.AddForce(new Vector2(0f, 1f) * jumpForce, ForceMode2D.Impulse);
             isGrounded = false;
             animator.SetBool("Grounded", isGrounded);
             animator.SetTrigger("Jump");
