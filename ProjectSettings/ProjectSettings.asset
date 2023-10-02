@@ -944,11 +944,11 @@ PlayerSettings:
   apiCompatibilityLevel: 6
   activeInputHandler: 2
   windowsGamepadBackendHint: 0
-  cloudProjectId: f1c4fae5-ec1a-4efe-a6fe-d07c81358e25
+  cloudProjectId: 9187219d-c507-4842-b0ed-ad95456ec4ab
   framebufferDepthMemorylessMode: 0
   qualitySettingsNames: []
   projectName: VeilOfDesolation
-  organizationId: juanesgs2002
+  organizationId: flora-as-publisher
   cloudEnabled: 0
   legacyClampBlendShapeWeights: 1
   hmiLoadingImage: {fileID: 0}
