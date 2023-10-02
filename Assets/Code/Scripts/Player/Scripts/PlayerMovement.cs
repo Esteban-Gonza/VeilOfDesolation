@@ -60,9 +60,9 @@ public class PlayerMovement : MonoBehaviour{
         }
 
         transform.localScale = new Vector3(xScale, 1, 1);
-        transform.Translate(Vector3.right * horizontalInput * speed * Time.deltaTime);
+        body.velocity = new Vector2(horizontalInput * speed, body.velocity.y);
 
- 
+
         if (Input.GetKeyDown(KeyCode.W))
         {
             body.AddForce(new Vector2(0f, 1f) * jumpForce, ForceMode2D.Impulse);
